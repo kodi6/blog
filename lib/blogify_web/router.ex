@@ -24,6 +24,7 @@ defmodule BlogifyWeb.Router do
 
 
     live "/kodi", BlogLive.Index, :index
+    live "/kodi/blog/show", BlogLive.Show, :index
 
   end
 
