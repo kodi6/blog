@@ -1,0 +1,35 @@
+<header class="">
+
+  <nav>
+    <div class="flex justify-between items-center bg-gray-800 mx-auto p-3">
+      <img class="w-2/12" src="images/Polymath Project-logos.jpeg" alt="logo">
+      <div class="md:flex space-x-4 text-white hidden ">
+        <a href={~p"/"}>Projects</a>
+        <a href={~p"/"}>Blog</a>
+        <a href={~p"/"}>About</a>
+        <p>Mode</p>
+      </div>
+      <div class="flex space-x-6 items-center text-white md:hidden">
+        <p>Mode</p>
+        <button class="text-white" type="button" id="toggle-button" phx-click={BlogifyWeb.Layouts.App.toggle_dropdown_menu()}>
+            <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button> 
+      </div>   
+    </div>
+    <div id="dropdown_menu" class=" text-gray-800 bg-gray-300 min-h-screen md:hidden shadow-2xl" hidden="true">
+      <div class="pt-14 px-6 space-y-3 font-bold">
+        <p>Projects</p>
+        <p>Blog</p>
+        <p>About</p>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+</main>
+
+<footer>
+</footer>
