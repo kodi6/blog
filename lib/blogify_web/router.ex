@@ -20,7 +20,11 @@ defmodule BlogifyWeb.Router do
   scope "/", BlogifyWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    # get "/", PageController, :home
+
+
+    live "/kodi", BlogLive.Index, :index
+
   end
 
   # Other scopes may use custom stacks.
