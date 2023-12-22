@@ -27,39 +27,21 @@
       </div>
     </div>
     <div class="mt-6">
-       <div class="md:grid grid-cols-3 gap-4  w-5/6 mx-auto space-y-4 md:space-y-0 md:w-full">
-        <div class="p-2 bg-orange-400 rounded-lg shadow-2xl ">
+       <div  class="md:grid grid-cols-3 gap-4  w-5/6 mx-auto space-y-4 md:space-y-0 md:w-full">
+        <.link  :for={{id, post} <- @streams.posts} class="p-2 bg-orange-400 rounded-lg shadow-lg shadow-blue-900/50" patch={~p"/kodi/blog/#{post.slug}"}>
           <img  class="w-full h-40" src="images/dummy.jpg" alt="logo">
           <div class="flex justify-between mt-3"> <span>December 5, 2023</span> <span> 4min read</span> </div>
-            <p class="font-bold mt-3">May the podcast outlive me!!!</p>
-            <p>m Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to</p>
+            <p class="font-bold mt-3"><%= post.title %></p>
+            <p><%= post.markup_text%></p>
           <div class="grid grid-cols-4 gap-4 mt-2">
             <div class="bg-green-300 p-2 text-center">Podcast</div>
             <div class="bg-green-300 p-2 text-center">Tail</div>
           </div>
-        </div>
+        </.link>
 
-      <div class="p-2 bg-orange-400 rounded-lg shadow-2xl ">
-        <img  class="w-full h-40" src="images/dummy.jpg" alt="logo">
-        <div class="flex justify-between mt-3"> <span>December 5, 2023</span> <span> 4min read</span> </div>
-          <p class="font-bold mt-3">May the podcast outlive me!!!</p>
-          <p>m Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to</p>
-        <div class="grid grid-cols-4 gap-4 mt-2">
-          <div class="bg-green-300 p-2 text-center">Podcast</div>
-          <div class="bg-green-300 p-2 text-center">Tail</div>
-        </div>
-      </div>
 
-      <div class="p-2 bg-orange-400 rounded-lg shadow-2xl ">
-        <img  class="w-full h-40" src="images/dummy.jpg" alt="logo">
-        <div class="flex justify-between mt-3"> <span>December 5, 2023</span> <span> 4min read</span> </div>
-          <p class="font-bold mt-3">May the podcast outlive me!!!</p>
-          <p>m Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to</p>
-        <div class="grid grid-cols-4 gap-4 mt-2">
-          <div class="bg-green-300 p-2 text-center">Podcast</div>
-          <div class="bg-green-300 p-2 text-center">Tail</div>
-        </div>
-      </div>
+     
+      
        </div>
     </div>
   </div>
