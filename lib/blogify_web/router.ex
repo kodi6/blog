@@ -23,8 +23,15 @@ defmodule BlogifyWeb.Router do
     # get "/", PageController, :home
 
 
-    live "/kodi", BlogLive.Index, :index
-    live "/kodi/blog/:slug", BlogLive.Show, :show
+    live "/polymath", BlogLive.Index, :index
+    live "/polymath/blog/:slug", BlogLive.Show, :show
+
+    live "/polymath/my_page", CreateBLogLive.Index, :index
+    live "/polymath/my_page/create", CreateBLogLive.Create, :create
+
+
+
+
 
   end
 

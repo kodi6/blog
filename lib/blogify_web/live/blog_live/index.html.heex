@@ -1,4 +1,4 @@
-<div class=" bg-yellow-200 px-3 overflow-hidden">
+<div class="bg-yellow-200 px-3 overflow-hidden">
   <div class="md:pt-[100px] md:flex md:space-x-3 pt-[80px]">
     <div class="md:w-1/4 ">
       <img class="md:w-80 md:h-80 w-full" src="images/profile.jpeg" alt="logo">
@@ -28,7 +28,7 @@
     </div>
     <div class="mt-6">
        <div  class="md:grid grid-cols-3 gap-4  w-5/6 mx-auto space-y-4 md:space-y-0 md:w-full">
-        <.link  :for={{id, post} <- @streams.posts} class="p-2 bg-orange-400 rounded-lg shadow-lg shadow-blue-900/50" patch={~p"/kodi/blog/#{post.slug}"}>
+        <.link  :for={{id, post} <- @streams.posts} class="p-2 bg-orange-300 rounded-lg shadow-lg" patch={~p"/polymath/blog/#{post.slug}"}>
           <img  class="w-full h-40" src="images/dummy.jpg" alt="logo">
           <div class="flex justify-between mt-3"> <span>December 5, 2023</span> <span> 4min read</span> </div>
             <p class="font-bold mt-3"><%= post.title %></p>

@@ -5,6 +5,6 @@ defmodule Blogify.Repo.Migrations.AddSlugToPosts do
       alter table(:posts) do
         add :slug, :string
       end
-      create index(:posts, [:slug], unique: true)
+      create index(:posts, [:slug])
   end
 end

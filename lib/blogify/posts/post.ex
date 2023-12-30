@@ -18,17 +18,22 @@ defmodule Blogify.Posts.Post do
 
   @doc false
   def changeset(post, attrs) do
-    attrs = Map.merge(attrs, slug_map(attrs))
     post
-    |> cast(attrs, [:title, :description, :markup_text, :slug])
-    |> validate_required([:title, :description, :markup_text])
+    |> cast(attrs, [:title, :description, :slug])
+    |> unique_constraint(:title)
+    |> build_slug()
+    |> validate_required([:title, :description])
   end
 
 
-
-
-  defp slug_map(%{"title" => title}) do
-    slug = String.downcase(title) |> String.replace(" ", "-")
-    %{"slug" => slug}
+  defp build_slug(changeset) do
+    if title = get_field(changeset, :title) do
+      slug = Slug.slugify(title)
+      put_change(changeset, :slug, slug)
+    else
+      changeset
+    end
   end
+
+
 end

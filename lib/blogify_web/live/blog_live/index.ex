@@ -10,4 +10,7 @@ defmodule BlogifyWeb.BlogLive.Index do
     limited_posts = Enum.take(posts, 3)
     {:ok, stream(socket, :posts, limited_posts)}
   end
+
+
+
 end
