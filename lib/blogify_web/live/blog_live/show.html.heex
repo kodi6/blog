@@ -1,0 +1,30 @@
+<div  class="bg-yellow-200 px-3 overflow-hidden">
+    <div class="pt-[80px]">
+        <div>Tuesday, December 5, 2023</div>
+        <h1 class="text-3xl font-extrabold leading-9 mt-6"><%= @post.title %></h1>
+        <div class="mt-6 mb-16"><%= @post.description %></div>
+        <div class="mt-6 mb-16"><%= @post.markup_text %></div>
+    </div>
+
+    <div class="flex flex-col items-center justify-center text-black mb-6">
+  <p class="text-center mb-4 ">
+  <span class="font-semibold">GET NOTIFIED ABOUT NEW POSTS</span><br />
+  Subscribe to my newsletter and I'll ping you whenever I publish a new post.
+  </p>
+  <div class="flex items-center justify-center">
+    <input
+    type="email"
+    placeholder="Enter your email"
+    class="border p-2 mr-2 rounded-l-md focus:outline-none"
+    />
+    <button
+    type="submit"
+    class="bg-blue-500 text-white p-2 rounded-r-md hover:bg-blue-600 focus:outline-none"
+    >
+    Subscribe
+    </button>
+  </div>
+</div>
+
+
+</div>

@@ -18,7 +18,8 @@ defmodule Blogify.Posts do
 
   """
   def list_posts do
-    Repo.all(Post)
+    from(p in Post, order_by: [desc: :inserted_at])
+    |> Repo.all()
   end
 
   @doc """
@@ -37,8 +38,11 @@ defmodule Blogify.Posts do
   """
   def get_post!(id), do: Repo.get!(Post, id)
 
+
+  def get_post_by_slug(slug), do: Repo.get_by!(Post, slug: slug)
+
   @doc """
-  Creates a post.
+  Creates a post.post-2post-2
 
   ## Examples
 
@@ -49,9 +53,16 @@ defmodule Blogify.Posts do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_post(owner, attrs \\ %{}) do
-    owner
-    |> Ecto.build_assoc(:posts)
+  # def create_post(owner, attrs \\ %{}) do
+  #   owner
+  #   |> Ecto.build_assoc(:posts)
+  #   |> Post.changeset(attrs)
+  #   |> Repo.insert()
+  # end
+
+
+  def create_post(attrs \\ %{}) do
+    %Post{}
     |> Post.changeset(attrs)
     |> Repo.insert()
   end
